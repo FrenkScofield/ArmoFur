@@ -125,7 +125,13 @@
                 Səhifələr
             </div>
             <!-- Nav Item - Utilities Collapse Menu -->
-          
+            <li class="nav-item">
+                <a class="nav-link" asp-area="WebCms" asp-controller="MainHome" asp-action="Index">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#clincs" aria-expanded="true" aria-controls="clincs">
                     <i class="fas fa-fw fa-folder"></i>
@@ -136,7 +142,7 @@
                         <h6 class="collapse-header">Create New Clinic:</h6>
                         <a class="collapse-item" asp-area="WebCms" asp-controller="Clinics" asp-action="Index"> Clinics</a>
                         <a class="collapse-item" asp-area="WebCms" asp-controller="ClinicDoctor" asp-action="Index">Clinic Doctors </a>
-                        
+
                     </div>
                 </div>
             </li>
