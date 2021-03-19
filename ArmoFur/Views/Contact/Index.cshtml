@@ -1,19 +1,23 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ArmoFur</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>İletişim | Bilgin's</title>
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat%3A500%2C700%7CRoboto+Condensed:700%7CRoboto%3A700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="~/css/line-awesome.css">
     <link type="text/css" rel="stylesheet" href="~/css/style.css">
     <link type="text/css" rel="stylesheet" href="~/css/responsive.css">
-    <link type="text/css" rel="stylesheet" href="~/css/photoswipe.css">
-    <link type="text/css" rel="stylesheet" href="~/css/default-skin/default-skin.css">
-    <link type="text/css" rel="stylesheet" href="~/css/tiny-slider.css">
-    @*<link type="text/css" rel="stylesheet" href="~/css/style.css">*@
+
     <!-- Icon -->
     <link rel="icon" href="~/img/favicon.png" sizes="32x32" />
     <!-- Google Tag Manager -->
@@ -35,8 +39,8 @@
     </script>
     <!-- End Google Tag Manager -->
 </head>
-<body class="bilgins-home-template has-spotlight bilgins-smooth-scroll">
 
+<body class="has-spotlight bilgins-smooth-scroll">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB9FQS3"
@@ -54,22 +58,19 @@
             <div class="bilgins-nav-block">
                 <nav class="bilgins-nav">
                     <ul class="main-menu">
-                        <li><a href="#">Ana Sayfa</a></li>
-                        <li><a asp-controller="About" asp-action="Index">Hakkımızda</a></li>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
                         <li><a href="https://shop.bilgins.com.tr" target="new">ONLINE SHOP</a></li>
                         <li class="menu-item-has-children">
                             <a href="#">Koleksiyonlar</a>
                             <ul class="sub-menu">
-                                <li><a asp-controller="WomanCollection" asp-action="Index">Kadın Koleksiyonu</a></li>
+                                <li><a href="kadin-koleksiyon.html">Kadın Koleksiyonu</a></li>
                                 <li><a href="erkek-koleksiyon.html">Erkek Koleksiyonu</a></li>
                             </ul>
                         </li>
-                        <li><a asp-controller="Stores" asp-action="Index">Mağazalar</a></li>
+                        <li><a href="magazalarimiz.html">Mağazalar</a></li>
                         <li><a href="medical.html">MEDICAL</a></li>
-                        <li><a asp-controller="Contact" asp-action="Index">İletişim</a></li>
-                        <li class="stroked">
-                            <a href="#">EN</a>
-                        </li>
+                        <li><a href="iletisim.html">İletişim</a></li>
                         <li>
                             <a href="#" class="bilgins-aside-toggler">
                                 <span class="bilgins-aside-toggler__icon01"></span>
@@ -82,22 +83,103 @@
             </div>
         </div>
     </header>
-    @RenderBody()
-    <footer id="bilgins-footer">
-        <div class="bilgins-footer-inner">
-            <div class="bilgins-footer__socials">
-                <ul class="bilgins-socials">
-                    <li><a href="https://www.facebook.com/bilginsleather/">Fb</a></li>
-                    <li><a href="https://www.instagram.com/bilginsluxury/">In</a></li>
-                    <li><a href="https://vk.com/bilginsleather">Vk</a></li>
-                </ul>
+
+    <!-- Content -->
+    <div class="bilgins-page-title-wrap">
+        <h1 class="bilgins-page-title">
+            <span>Soru ve önerilerinizi</span> Bize yazın
+        </h1>
+    </div>
+
+    <main class="bilgins-content-wrap">
+        <div class="bilgins-content-scroll">
+            <div class="bilgins-content">
+                <section class="bilgins-section">
+                    <div class="bilgins-row">
+                        <div class="bilgins-col col-12">
+                            <p class="bilgins-intro">Her türlü soru ve sorunlarınızı cevaplamak için sabırsızlanıyoruz. Lütfen aşağıdaki formu çekinmeden doldurup bize gönderin.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="bilgins-row">
+                    <div class="bilgins-col col-4">
+                        <div class="bilgins-contact-details">
+                            <h4 class="bilgins-contact-details__title">
+                                <span>MERKEZ Ofis VE SOSYAL MEDYA</span> İLETİŞİM BİLGİLERİMİZ
+                            </h4>
+                            <ul class="bilgins-contact-details__list">
+                                <li>
+                                    <i class="bilgins-contact-icon la la-map-marker"></i> Kazlıçeşme Mh. Hacı Reşit Bey Sk. No:5 Zeytinburnu İstanbul
+                                </li>
+                                <li>
+                                    <i class="bilgins-contact-icon la la-phone"></i>
+                                    <a href="tel:+902125586070">+90 212 558 6070</a>
+                                </li>
+                                <li>
+                                    <i class="bilgins-contact-icon la la-envelope"></i>
+                                    <a href="mailto:info@bilgins.com.tr">info@bilgins.com.tr</a>
+                                </li>
+                                <li class="bilgins-contact-socials">
+                                    <i class="bilgins-contact-icon la la-share-alt"></i>
+                                    <a href="https://www.facebook.com/bilginsleather/" target="_blank">Fb</a>
+                                    <a href="https://www.instagram.com/bilginsluxury/" target="_blank">In</a>
+                                    <a href="https://vk.com/bilginsleather" target="_blank">Vk</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- .bilgins-contact-details -->
+                    </div>
+                    <div class="bilgins-col col-8">
+                        <form action="mail.php" method="post" class="bilgins-contact-form">
+                            <div class="bilgins-row bilgins-small-gap">
+                                <div class="bilgins-col col-4">
+                                    <input type="text" id="name" name="name" placeholder="Adınız" required>
+                                </div>
+                                <div class="bilgins-col col-4">
+                                    <input type="email" id="email" name="email" placeholder="E-Postanız" required>
+                                </div>
+                                <div class="bilgins-col col-4">
+                                    <input type="tel" id="phone" name="phone" placeholder="Telefonunuz" required>
+                                </div>
+                            </div>
+                            <textarea name="message" id="message" placeholder="Mesajınız" required></textarea>
+                            <div class="bilgins-contact-form__footer">
+                                <div class="bilgins-contact-form__response"></div>
+                                <div class="bilgins-contact-form__submit">
+                                    <input type="submit" value="Gönder">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="bilgins-footer__copyright">
-                Bilgin's &copy; 2020. Tescilli Markadır.
-            </div>
+            <!-- .bilgins-content -->
+            <!-- Footer -->
+            <footer id="bilgins-footer">
+                <div class="bilgins-footer-inner">
+                    <div class="bilgins-footer__socials">
+                        <ul class="bilgins-socials">
+                            <li><a href="https://www.facebook.com/bilginsleather/">Fb</a></li>
+                            <li><a href="https://www.instagram.com/bilginsluxury/">In</a></li>
+                            <li><a href="https://vk.com/bilginsleather">Vk</a></li>
+                        </ul>
+                    </div>
+                    <div class="bilgins-footer__copyright">
+                        Bilgin's &copy; 2020. Tescilli Markadır.
+                    </div>
+                </div>
+                <script src="//code.jivosite.com/widget/KvUvPH327h" async></script>
+            </footer>
         </div>
-        <script src="//code.jivosite.com/widget/KvUvPH327h" async></script>
-    </footer>
+        <!-- .bilgins-content-scroll -->
+    </main>
+
+    <div class="bilgins-to-top-wrap bilgins-back-wrap">
+        <div class="bilgins-back is-to-top">
+            <span>Geri Dön</span>
+            <span>Yukarı</span>
+        </div>
+    </div>
 
     <!-- Aside Bar -->
     <aside id="bilgins-aside">
@@ -156,7 +238,7 @@
         <!-- .bilgins-aside-inner -->
     </aside>
 
-    <div class="bilgins-home-block-overlay"></div>
+    <!-- UI Elements -->
     <div class="bilgins-menu-overlay"></div>
     <div class="bilgins-aside-overlay"></div>
     <div class="bilgins-cursor is-inactive">
@@ -166,19 +248,14 @@
         <span class="bilgins-cursor-zoom bilgins-cursor-label">Yaklaş</span>
     </div>
 
+    <!-- SCRIPTS -->
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/gsap.min.js"></script>
-    <script src="~/js/masonry.min.js"></script>
     <script src="~/js/core.js"></script>
-
-    <!-- SCRIPTS -->
-    <script src="~/js/jquery.lazy.min.js"></script>
-    <script src="~/js/tiny-slider.js"></script>
-    <script src="~/js/photoswipe.min.js"></script>
-    <script src="~/js/photoswipe-ui-default.min.js"></script>
-
-    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
-    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
-    @RenderSection("Scripts", required: false)
 </body>
+
 </html>
+
+
+
+
