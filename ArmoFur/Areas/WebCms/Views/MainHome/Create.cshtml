@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/WebCms/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12 my-4">
+        <div class="card shadow my-4">
+            <div class="card-header py-4">
+                Ana Sayfaya Video Ekleme Bolumu <a asp-action="Index" class="float-right btn btn-outline-secondary">Geri git</a>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-row">
+                       
+                        <div class="col-md-6">
+                            <fieldset class="radiogenel">
+                                <legend>Video Ekle</legend>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="image">Logo</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="hidden" name="Image" value="">
+                                        <input type="file" class="custom-file-input imginput" id="image1" name="File" onchange="previewFile()">
+                                        <label class="custom-file-label" for="image">Choose file</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5">
+                                    <video width="500" height="350" controls  id="img1" src="">
+                                    </video>
+                                </div>
+                            </fieldset>
+                        </div>
+                      
+                    </div>
+                    <div class="form-group"    style="margin-top: 40px;">
+                        <input type="submit" value="Ekle" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

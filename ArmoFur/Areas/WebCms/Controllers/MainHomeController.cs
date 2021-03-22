@@ -18,9 +18,22 @@ namespace ArmoFur.Areas.WebCms.Controllers
         {
             _context = context;
         }
+        //Homa index page Start
         public IActionResult Index()
         {
             return View();
         }
+        //Homa index page End
+
+        //Homa Create page Start
+        public IActionResult Create()
+        {
+            return View();
+        }
+        //Homa Create page End
+
+
+
+
     }
 }
