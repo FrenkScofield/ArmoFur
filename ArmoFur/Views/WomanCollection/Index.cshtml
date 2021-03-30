@@ -1,55 +1,219 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
-<!-- Content -->
-<div class="bilgins-page-title-wrap">
-    <h1 class="bilgins-page-title">
-        <span>BİLGİN'S</span> KADIN Koleksiyonu
-    </h1>
-</div>
+<!DOCTYPE html>
+<html lang="tr">
 
-<div class="bilgins-albums-slider-wrap">
-    <div class="bilgins-albums-slider is-parallax" id="albums_slider">
-        <div class="bilgins-album-item">
-            <img class="bilgins-album-item__image" src="~/img/gallery/slider/01.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bilgin's | Leather Fur</title>
 
-            @*<div class="bilgins-album-item__image" data-src="~/img/gallery/slider/01.png"></div>*@
-            <div class="bilgins-album-item_overlay"></div>
-        </div>
-        <!-- .bilgins-album-item -->
-        <div class="bilgins-album-item">
-            <img class="bilgins-album-item__image" src="~/img/gallery/slider/02.png">
-            <div class="bilgins-album-item__overlay"></div>
-        </div>
-        <!-- .bilgins-album-item -->
-        <div class="bilgins-album-item">
-            <img class="bilgins-album-item__image" src="~/img/gallery/slider/03.png">
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%3A500%2C700%7CRoboto+Condensed:700%7CRoboto%3A700&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/line-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MB9FQS3');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Icon -->
+    <link rel="icon" href="img/favicon.png" sizes="32x32" />
+</head>
 
-            @*<div class="bilgins-album-item__image" data-src="~/img/gallery/slider/03.png"></div>*@
-            <div class="bilgins-album-item__overlay"></div>
+<body class="has-spotlight bilgins-albums-template bilgins-albums-template--slider">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB9FQS3"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Header -->
+    <header id="bilgins-header">
+        <div class="bilgins-header-inner">
+            <div class="bilgins-logo-block">
+                <a asp-controller="Home" asp-action="Index" class="bilgins-logo is-retina">
+                    <img src="~/img/logo.png" alt="Bilgins Logo" width="417" height="100">
+                </a>
+            </div>
+            <div class="bilgins-nav-block">
+                <nav class="bilgins-nav">
+                    <ul class="main-menu">
+                        <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+                        <li><a asp-controller="About" asp-action="Index">Hakkımızda</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Koleksiyonlar</a>
+                            <ul class="sub-menu">
+                                <li><a asp-controller="WomanCollection" asp-action="Index">Kadın Koleksiyonu</a></li>
+                                <li><a asp-controller="ManCollection" asp-action="Index">Erkek Koleksiyonu</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-controller="Stores" asp-action="Index">Mağazalar</a></li>
+                        <li><a asp-controller="Contact" asp-action="Index">İletişim</a></li>
+                        <li>
+                            <a href="#" class="bilgins-aside-toggler">
+                                <span class="bilgins-aside-toggler__icon01"></span>
+                                <span class="bilgins-aside-toggler__icon02"></span>
+                                <span class="bilgins-aside-toggler__icon03"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <!-- .bilgins-album-item -->
-        <div class="bilgins-album-item">
-            <div class="bilgins-album-item__image" data-src="~/img/gallery/slider/04.png"></div>
-            <div class="bilgins-album-item__overlay"></div>
-        </div>
-        <!-- .bilgins-album-item -->
-        <div class="bilgins-album-item">
-            <div class="bilgins-album-item__image" data-src="~/img/gallery/slider/05.png"></div>
-            <div class="bilgins-album-item__overlay"></div>
-        </div>
-        <!-- .bilgins-album-item -->
-        <div class="bilgins-album-item">
-            <div class="bilgins-album-item__image" data-src="~/img/gallery/slider/06.png"></div>
-            <div class="bilgins-album-item__overlay"></div>
-        </div>
-        <!-- .bilgins-album-item -->
+    </header>
+
+    <!-- Content -->
+    <div class="bilgins-page-title-wrap">
+        <h1 class="bilgins-page-title">
+            <span>BİLGİN'S</span> KADIN Koleksiyonu
+        </h1>
     </div>
-    <!-- .bilgins-albums-slider -->
-    <a href="#" class="bilgins-slider-prev">geri</a>
-    <a href="#" class="bilgins-slider-next">ileri</a>
-</div>
-<!-- .bilgins-albums-slider-wrap -->
+
+    <div class="bilgins-albums-slider-wrap">
+        <div class="bilgins-albums-slider is-parallax" id="albums_slider">
+            <div class="bilgins-album-item">
+                <div class="bilgins-album-item__image" data-src="/img/gallery/slider/01.png"></div>
+                <div class="bilgins-album-item_overlay"></div>
+            </div>
+            <!-- .bilgins-album-item -->
+            <div class="bilgins-album-item">
+                <div class="bilgins-album-item__image" data-src="/img/gallery/slider/02.png"></div>
+                <div class="bilgins-album-item__overlay"></div>
+            </div>
+            <!-- .bilgins-album-item -->
+            <div class="bilgins-album-item">
+                <div class="bilgins-album-item__image" data-src="/img/gallery/slider/03.png"></div>
+                <div class="bilgins-album-item__overlay"></div>
+            </div>
+            <!-- .bilgins-album-item -->
+            <div class="bilgins-album-item">
+                <div class="bilgins-album-item__image" data-src="/img/gallery/slider/04.png"></div>
+                <div class="bilgins-album-item__overlay"></div>
+            </div>
+            <!-- .bilgins-album-item -->
+            <div class="bilgins-album-item">
+                <div class="bilgins-album-item__image" data-src="/img/gallery/slider/05.png"></div>
+                <div class="bilgins-album-item__overlay"></div>
+            </div>
+            <!-- .bilgins-album-item -->
+            <div class="bilgins-album-item">
+                <div class="bilgins-album-item__image" data-src="/img/gallery/slider/06.png"></div>
+                <div class="bilgins-album-item__overlay"></div>
+            </div>
+            <!-- .bilgins-album-item -->
+        </div>
+        <!-- .bilgins-albums-slider -->
+        <a href="#" class="bilgins-slider-prev">geri</a>
+        <a href="#" class="bilgins-slider-next">ileri</a>
+    </div>
+    <!-- .bilgins-albums-slider-wrap -->
+    <!-- Footer -->
+    <footer id="bilgins-footer">
+        <div class="bilgins-footer-inner">
+            <div class="bilgins-footer__socials">
+                <ul class="bilgins-socials">
+                    <li><a href="https://www.facebook.com/bilginsleather/">Fb</a></li>
+                    <li><a href="https://www.instagram.com/bilginsluxury/">In</a></li>
+                    <li><a href="https://vk.com/bilginsleather">Vk</a></li>
+                </ul>
+            </div>
+            <div class="bilgins-footer__copyright">
+                Bilgin's &copy; 2020. Tescilli Markadır.
+            </div>
+        </div>
+        <script src="//code.jivosite.com/widget/LZbUufWCxs" async></script>
+    </footer>
+
+    <!-- Aside Bar -->
+    <aside id="bilgins-aside">
+        <a href="#" class="bilgins-aside-close">Kapat</a>
+        <div class="bilgins-aside-inner">
+            <div class="bilgins-aside-content">
+                <div class="bilgins-widget bilgins-widget--about">
+                    <div class="bilgins-widget--about__head">
+                        <img src="~/img/general/owner-avatar.png" alt="Andrew Shade">
+                        <h5>
+                            <span>Since 1988</span> Bilgin's
+                        </h5>
+                    </div>
+                    <p>
+                        1988 yılından bu yana Türkiye başta olmak üzere dünyadaki birçok ünlü markanın kürk, deri ve tekstil ürünlerinin üretimini gerçekleştiren Bilgin's Luxury, şimdi de kendi markası ile ürünlerini Rusya, Ukrayna, ABD, İngiltere, Güney
+                        Kore ve Arap coğrafyasındaki geniş bir hedef kitleye sunmaktadır.
+                    </p>
+                    <p class="align-right">
+                        <a asp-controller="About" asp-action="Index" class="bilgins-learn-more">Daha fazla bilgi</a>
+                    </p>
+                </div>
+                <!-- .bilgins-widget -->
+
+                <div class="bilgins-widget bilgins-widget--contacts">
+                    <h5 class="bilgins-widget-title">
+                        <span>Sosyal Medya ve</span> İletişim Bilgilerimiz
+                    </h5>
+                    <ul class="bilgins-contact-details__list">
+                        <li>
+                            <i class="bilgins-contact-icon la la-map-marker"></i> Kazlıçeşme Mh. Hacı Reşit Bey Sk. Zeytinburnu İstanbul
+                        </li>
+                        <li>
+                            <i class="bilgins-contact-icon la la-phone"></i>
+                            <a href="tel:+902125586070">+90 212 558 6070</a>
+                        </li>
+                        <li>
+                            <i class="bilgins-contact-icon la la-envelope"></i>
+                            <a href="mailto:info@bilgins.com.tr">info@bilgins.com.tr</a>
+                        </li>
+                        <li class="bilgins-contact-socials">
+                            <i class="bilgins-contact-icon la la-share-alt"></i>
+                            <a href="https://www.facebook.com/bilginsleather/" target="_blank">Fb</a>
+                            <a href="https://www.instagram.com/bilginsluxury/" target="_blank">In</a>
+                            <a href="https://vk.com/bilginsleather" target="_blank">Vk</a>
+                        </li>
+                    </ul>
+                    <p class="align-right">
+                        <a asp-controller="Contact" asp-action="Index" class="bilgins-learn-more">İletşim Formu</a>
+                    </p>
+                </div>
+                <!-- .bilgins-widget -->
+
+            </div>
+            <!-- .bilgins-aside-content -->
+        </div>
+        <!-- .bilgins-aside-inner -->
+    </aside>
+
+    <!-- UI Elements -->
+    <div class="bilgins-menu-overlay"></div>
+    <div class="bilgins-aside-overlay"></div>
+    <div class="bilgins-cursor is-inactive">
+        <span class="bilgins-cursor-circle"></span>
+        <span class="bilgins-cursor-slider"></span>
+        <span class="bilgins-cursor-close bilgins-cursor-label">Kapat</span>
+        <span class="bilgins-cursor-zoom bilgins-cursor-label">Yaklaş</span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/gsap.min.js"></script>
+    <script src="~/js/core.js"></script>
+    <script src="~/js/bilgins-slider.js"></script>
+</body>
+
+</html>

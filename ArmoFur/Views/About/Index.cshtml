@@ -52,26 +52,24 @@
     <header id="bilgins-header">
         <div class="bilgins-header-inner">
             <div class="bilgins-logo-block">
-                <a href="index.html" class="bilgins-logo is-retina">
+                <a asp-controller="Home" asp-action="Index" class="bilgins-logo is-retina">
                     <img src="~/img/logo.png" alt="Bilgins Logo" width="417" height="100">
                 </a>
             </div>
             <div class="bilgins-nav-block">
                 <nav class="bilgins-nav">
                     <ul class="main-menu">
-                        <li><a href="index.html">Ana Sayfa</a></li>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="https://shop.bilgins.com.tr" target="new">ONLINE SHOP</a></li>
+                        <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+                        <li><a asp-controller="About" asp-action="Index">Hakkımızda</a></li>
                         <li class="menu-item-has-children">
                             <a href="#">Koleksiyonlar</a>
                             <ul class="sub-menu">
-                                <li><a href="kadin-koleksiyon.html">Kadın Koleksiyonu</a></li>
-                                <li><a href="erkek-koleksiyon.html">Erkek Koleksiyonu</a></li>
+                                <li><a asp-controller="WomanCollection" asp-action="Index">Kadın Koleksiyonu</a></li>
+                                <li><a asp-controller="ManCollection" asp-action="Index">Erkek Koleksiyonu</a></li>
                             </ul>
                         </li>
-                        <li><a href="magazalarimiz.html">Mağazalar</a></li>
-                        <li><a href="medical.html">MEDICAL</a></li>
-                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a asp-controller="Stores" asp-action="Index">Mağazalar</a></li>
+                        <li><a asp-controller="Contact" asp-action="Index">İletişim</a></li>
                         <li>
                             <a href="#" class="bilgins-aside-toggler">
                                 <span class="bilgins-aside-toggler__icon01"></span>
@@ -146,25 +144,25 @@
                             <div class="bilgins-grid bilgins-grid-4cols">
                                 <div class="bilgins-grid-item">
                                     <a href="~/img/general/studio01.png" class="bilgins-lightbox-link" data-size="1160x920">
-                                        <img src="~/img/null.png" data-src="~/img/general/thmb-studio01.png" class="lazy" alt="My Studio" width="1160" height="920">
+                                        <img src="https://bilgins.com.tr/img/general/thmb-studio01.png" data-src="~/img/general/thmb-studio01.png" class="lazy" alt="My Studio" width="1160" height="920">
                                     </a>
                                 </div>
                                 <!-- .bilgins-album-item -->
                                 <div class="bilgins-grid-item">
-                                    <a href="~/img/general/studio02.png" class="bilgins-lightbox-link" data-size="1160x920">
-                                        <img src="~/img/null.png" data-src="~/img/general/thmb-studio02.png" class="lazy" alt="My Studio" width="1160" height="920">
+                                    <a href="#" class="bilgins-lightbox-link" data-size="1160x920">
+                                        <img src="https://bilgins.com.tr/img/general/thmb-studio01.png" data-src="~/img/general/thmb-studio02.png" class="lazy" alt="My Studio" width="1160" height="920">
                                     </a>
                                 </div>
                                 <!-- .bilgins-album-item -->
                                 <div class="bilgins-grid-item">
-                                    <a href="~/img/general/studio03.png" class="bilgins-lightbox-link" data-size="1160x920">
-                                        <img src="~/img/null.png" data-src="~/img/general/thmb-studio03.png" class="lazy" alt="My Studio" width="1160" height="920">
+                                    <a href="#" class="bilgins-lightbox-link" data-size="1160x920">
+                                        <img src="https://bilgins.com.tr/img/general/thmb-studio01.png" class="lazy" alt="My Studio" width="1160" height="920">
                                     </a>
                                 </div>
                                 <!-- .bilgins-album-item -->
                                 <div class="bilgins-grid-item">
                                     <a href="~/img/general/studio04.png" class="bilgins-lightbox-link" data-size="1160x920">
-                                        <img src="~/img/null.png" data-src="~/img/general/thmb-studio04.png" class="lazy" alt="My Studio" width="1160" height="920">
+                                        <img src="https://bilgins.com.tr/img/general/thmb-studio01.png" data-src="~/img/general/thmb-studio04.png" class="lazy" alt="My Studio" width="1160" height="920">
                                     </a>
                                 </div>
                                 <!-- .bilgins-album-item -->
@@ -221,7 +219,7 @@
                         Kore ve Arap coğrafyasındaki geniş bir hedef kitleye sunmaktadır.
                     </p>
                     <p class="align-right">
-                        <a href="hakkimizda.html" class="bilgins-learn-more">Daha fazla bilgi</a>
+                        <a asp-controller="About" asp-action="Index" class="bilgins-learn-more">Daha fazla bilgi</a>
                     </p>
                 </div>
                 <!-- .bilgins-widget -->
@@ -250,7 +248,7 @@
                         </li>
                     </ul>
                     <p class="align-right">
-                        <a href="iletisim.html" class="bilgins-learn-more">İletşim Formu</a>
+                        <a asp-controller="Contact" asp-action="Index" class="bilgins-learn-more">İletşim Formu</a>
                     </p>
                 </div>
                 <!-- .bilgins-widget -->

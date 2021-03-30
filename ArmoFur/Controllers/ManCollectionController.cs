@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArmoFur.Controllers
 {
-    [Route("[controller]/[action]")]
-    public class AboutController : Controller
+    public class ManCollectionController : Controller
     {
         public IActionResult Index()
         {

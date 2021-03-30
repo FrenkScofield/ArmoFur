@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ArmoFur.Models;
+using Microsoft.AspNetCore.Localization;
+using ArmoFur.Extensions;
+using Microsoft.AspNetCore.Http;
+using ArmoFur.Models.DAL;
 
 namespace ArmoFur.Controllers
 {
@@ -13,9 +17,12 @@ namespace ArmoFur.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly MyContext _context;
+
+        public HomeController(ILogger<HomeController> logger, MyContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -26,6 +33,21 @@ namespace ArmoFur.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public async Task<IActionResult> SetLanguage(string culture, string returnUrl)
+        {
+            culture = culture == null ? "az-Latn" : culture;
+            returnUrl = returnUrl == null ? "/" : returnUrl;
+
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+
+            await HttpContext.SetLanguageAsync(_context, "lang_id", culture);
+            return LocalRedirect(returnUrl);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

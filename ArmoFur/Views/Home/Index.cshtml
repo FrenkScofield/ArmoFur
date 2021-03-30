@@ -36,6 +36,108 @@
 </div>
 <!-- .bilgins-to-top-wrap -->
 <!-- Home Contacts Block -->
+<!-- Home Contacts Block -->
+<div id="bilgins-home-contacts">
+    <div class="bilgins-row">
+        <div class="bilgins-col col-12">
+            <p class="bilgins-intro">Her türlü soru ve sorunlarınızı cevaplamak için sabırsızlanıyoruz. Lütfen aşağıdaki formu çekinmeden doldurup bize gönderin.</p>
+        </div>
+    </div>
+    <!-- .bilgins-row -->
+    <div class="bilgins-row">
+        <div class="bilgins-col col-4">
+            <div class="bilgins-contact-details">
+                <h4 class="bilgins-contact-details__title">
+                    <span>MERKEZ Ofis VE SOSYAL MEDYA</span> İLETİŞİM BİLGİLERİMİZ
+                </h4>
+                <ul class="bilgins-contact-details__list">
+                    <li>
+                        <i class="bilgins-contact-icon la la-map-marker"></i> Kazlıçeşme Mh. Hacı Reşit Bey Sk. No: 5 Zeytinburnu İstanbul
+                    </li>
+                    <li>
+                        <i class="bilgins-contact-icon la la-phone"></i>
+                        <a href="tel:+902125586070">+90 212 558 6070</a>
+                    </li>
+                    <li>
+                        <i class="bilgins-contact-icon la la-envelope"></i>
+                        <a href="mailto:info@bilgins.com.tr">info@bilgins.com.tr</a>
+                    </li>
+                    <li class="bilgins-contact-socials">
+                        <i class="bilgins-contact-icon la la-share-alt"></i>
+                        <a href="https://www.facebook.com/bilginsleather/" target="_blank">Fb</a>
+                        <a href="https://www.instagram.com/bilginsluxury/" target="_blank">In</a>
+                        <a href="https://vk.com/bilginsleather" target="_blank">Vk</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .bilgins-contact-details -->
+        </div>
+        <div class="bilgins-col col-8">
+            <form action="mail.php" method="post" class="bilgins-contact-form">
+                <div class="bilgins-row bilgins-small-gap">
+                    <div class="bilgins-col col-4">
+                        <input type="text" id="name" name="name" placeholder="Adınız" required>
+                    </div>
+                    <div class="bilgins-col col-4">
+                        <input type="email" id="email" name="email" placeholder="E-Postanız" required>
+                    </div>
+                    <div class="bilgins-col col-4">
+                        <input type="tel" id="phone" name="phone" placeholder="Telefonunuz" required>
+                    </div>
+                </div>
+                <textarea name="message" id="message" placeholder="Mesajınız" required></textarea>
+                <div class="bilgins-contact-form__footer">
+                    <div class="bilgins-contact-form__response"></div>
+                    <div class="bilgins-contact-form__submit">
+                        <input type="submit" value="Gönder">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- #bilgins-home-contacts -->
+<!-- Home Works Block -->
+<div id="bilgins-home-works">
+    <div class="bilgins-row">
+        <div class="bilgins-col col-12">
+            <div class="bilgins-albums-grid bilgins-grid bilgins-grid-2cols">
+                <div class="bilgins-album-item bilgins-grid-item">
+                    <div class="bilgins-album-item__image">
+                        <picture>
+                            <source srcset="~/img/albums/masonry/album01.webp" type="image/webp">
+                            <source srcset="~/img/albums/masonry/album01.png" type="image/png">
+                            <img src="~/img/albums/masonry/album01.png" alt="ilk albüm">
+                        </picture>
+                    </div>
+                    <h5>
+                        <span>Bilgin's Luxury</span> Kadın Kolleksiyonu
+                    </h5>
+                    <a asp-controller="WomanCollection" asp-action="Index" class="bilgins-album-item__link"></a>
+                </div>
+                <!-- .bilgins-album-item -->
+                <div class="bilgins-album-item bilgins-grid-item">
+                    <div class="bilgins-album-item__image">
+                        <picture>
+                            <source srcset="~/img/albums/masonry/album02.webp" type="image/webp">
+                            <source srcset="~/img/albums/masonry/album02.png" type="image/png">
+                            <img src="~/img/albums/masonry/album02.png" alt="ilk albüm">
+                        </picture>
+                    </div>
+                    <h5>
+                        <span>Bilgin's Luxury</span> Erkek Koleksiyonu
+                    </h5>
+                    <a asp-controller="ManCollection" asp-action="index" class="bilgins-album-item__link"></a>
+                </div>
+                <!-- .bilgins-album-item -->
+
+            </div>
+            <!-- .bilgins-albums-grid -->
+        </div>
+        <!-- .bilgins-col -->
+    </div>
+    <!-- .bilgins-row -->
+</div>
 
 <!-- #bilgins-home-contacts -->
 <!-- Home Works Block -->

@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using ArmoFur.Models.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +34,21 @@ namespace ArmoFur
             {
                 options.UseSqlServer(_configuration["ConnectionStrings:Default"]);
             });
+
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                     new CultureInfo("en-US"),
+                    new CultureInfo("az-Latn")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture(culture: supportedCultures[1], uiCulture: supportedCultures[1]);
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +74,10 @@ namespace ArmoFur
            
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                  name: "default",
+                  pattern: "{controller=Home}/{action=Index}/{id?}");
+
                 endpoints.MapAreaControllerRoute(
                  name: "areas", "WebCms",
                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
@@ -65,9 +86,7 @@ namespace ArmoFur
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{url?}");
 
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+              
             });
         }
     }

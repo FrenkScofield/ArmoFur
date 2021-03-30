@@ -4,14 +4,16 @@ using ArmoFur.Models.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArmoFur.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20210322174217_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,15 +28,10 @@ namespace ArmoFur.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FileId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("OrderBy")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FileId");
 
                     b.ToTable("Abouts");
                 });
@@ -581,15 +578,6 @@ namespace ArmoFur.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("ArmoFur.Models.BLL.About", b =>
-                {
-                    b.HasOne("ArmoFur.Models.BLL.File", "File")
-                        .WithMany("Abouts")
-                        .HasForeignKey("FileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ArmoFur.Models.BLL.Translate.AboutQualityTranslate", b =>

@@ -1,0 +1,117 @@
+﻿@model ArmoFur.Models.VM.AboutViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/WebCms/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 my-4">
+        <div class="card shadow my-4">
+            <div class="card-header py-4">
+                Elave et <a asp-action="Index" class="float-right btn btn-outline-secondary">Back to Index</a>
+            </div>
+
+            <div>
+                <input type="file" class="form-control" />
+            </div>
+
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <div class="form-language my-3">
+                                @{
+                                    int a = 0;
+                                    int b = 0;
+                                }
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    @foreach (var item in context.Languages.ToList())
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link languageTabs @(a == 0 ? "active":" ") " id="nav-@item.Code-tab" data-toggle="tab" href="#nav-@item.Code" role="tab" aria-controls="nav-@item.Code" aria-selected="true">@item.Name</a>
+                                        </li>
+                                        a++;
+                                    }
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    @foreach (var item in context.Languages.ToList())
+                                    {
+                                    <div class="tab-pane fade @(b == 0 ? " show active" : "") py-4" id="nav-@item.Code" role="tabpanel" aria-labelledby="nav-@item.Code">
+                                        <div class="form-group">
+                                            <label class="control-label">Başlıq - (@item.ShortName)</label>
+                                            <input type="text" name="viewModel.AboutTranslates[@b].Title" class="form-control" value="@item.AboutTranslates.FirstOrDefault().Title" />
+                                            <label class="control-label">Haqqında məlumat - (@item.ShortName)</label>
+
+                                        </div>
+                                        <textarea name="viewModel.AboutTranslates[@b].Description" id="editor@(item.Id)" class="form-control" rows="30">@item.AboutTranslates.FirstOrDefault().Description</textarea>
+                                        <input type="hidden" id="hidden-languageId" value="@item.Id" />
+                                        <input type="hidden" name="viewModel.AboutTranslates[@b].AboutId" value="@item.AboutTranslates.FirstOrDefault().Aboutid" />
+                                        <input type="hidden" name="viewModel.AboutTranslates[@b].LanguageId" value="@item.Id" />
+
+                                    </div>
+                                        b++;
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Ekle" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor1'))
+
+            .then(editor => {
+                console.log(editor);
+            })
+
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor2'))
+
+            .then(editor => {
+                console.log(editor);
+            })
+
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor3'))
+
+            .then(editor => {
+                console.log(editor);
+            })
+
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+
+
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
