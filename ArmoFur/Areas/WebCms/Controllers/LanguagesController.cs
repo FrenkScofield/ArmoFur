@@ -74,14 +74,7 @@ namespace ArmoFur.Areas.WebCms.Controllers
                         Languageid = result.Entity.Id
                     });
                 }
-                //foreach (var item in _context.Seos)
-                //{
-                //    _context.SeoTranslates.Add(new SeoTranslate()
-                //    {
-                //        SeoId = item.Id,
-                //        LanguageId = result.Entity.Id
-                //    });
-                //}
+               
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

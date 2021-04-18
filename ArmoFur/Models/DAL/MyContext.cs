@@ -23,6 +23,7 @@ namespace ArmoFur.Models.DAL
         public DbSet<QualityImage> QualityImages { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<WomanCollection> WomanCollections { get; set; }
+        public DbSet<MainPage> MainPages { get; set; }
 
 
         public DbSet<AboutTranslate> AboutTranslates { get; set; }

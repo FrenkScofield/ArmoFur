@@ -843,11 +843,12 @@ header#bilgins-header .bilgins-header-inner {
     display: block;
 }
 
-.bilgins-logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+    .bilgins-logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 61px;
+    }
 
 .bilgins-nav-block {
     display: flex;

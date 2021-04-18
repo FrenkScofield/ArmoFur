@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210323164520_addFileIdProp.cs" />
-    <Compile Remove="Migrations\20210323164520_addFileIdProp.Designer.cs" />
+    <Compile Remove="Extension\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="Extension\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Extension\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Extension\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,16 +24,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\WebCms\Data\" />
     <Folder Include="Areas\WebCms\Models\" />
     <Folder Include="Areas\WebCms\Views\Shared\" />
-    <Folder Include="Extension\" />
-    <Folder Include="Services\" />
     <Folder Include="wwwroot\admin\" />
     <Folder Include="wwwroot\File\Images\" />
+    <Folder Include="wwwroot\File\video\" />
   </ItemGroup>
 
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using ArmoFur.Extensions;
 using ArmoFur.Models.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,7 +36,7 @@ namespace ArmoFur
                 options.UseSqlServer(_configuration["ConnectionStrings:Default"]);
             });
 
-
+            services.AddTransient<IFileUpload, FileUpload>();
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new[]

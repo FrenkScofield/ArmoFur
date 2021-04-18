@@ -97,7 +97,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">ZN Admin <sup>1</sup></div>
+                <div class="sidebar-brand-text mx-3">ARMO Fur Yonetici Paneli</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -105,7 +105,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/WebCms/">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Ana Səhifə</span>
+                    <span>Ana Sayfa</span>
                 </a>
             </li>
             <!-- Divider -->
@@ -122,114 +122,48 @@
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
-                Səhifələr
+                Sayfalar
             </div>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" asp-area="WebCms" asp-controller="MainHome" asp-action="Index">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Ana Sayfa</span>
+                    <span>ANA SAYFA</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="WebCms" asp-controller="About" asp-action="Index">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>HAKKIMIZDA</span>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#clincs" aria-expanded="true" aria-controls="clincs">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Clinics</span>
+                    <span>KOLEKSIONLAR</span>
                 </a>
                 <div id="clincs" class="collapse" aria-labelledby="clincs" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Create New Clinic:</h6>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Clinics" asp-action="Index"> Clinics</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="ClinicDoctor" asp-action="Index">Clinic Doctors </a>
+                        <h6 class="collapse-header">Yeni koleksion ekle:</h6>
+                        <a class="collapse-item" asp-area="WebCms" asp-controller="Clinics" asp-action="Index"> Erkek</a>
+                        <a class="collapse-item" asp-area="WebCms" asp-controller="ClinicDoctor" asp-action="Index">Kadin </a>
 
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiess" aria-expanded="true" aria-controls="collapseUtilitiess">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Department</span>
-                </a>
-                <div id="collapseUtilitiess" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Səhifə haqqında:</h6>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Department" asp-action="Index">Yeni Department</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Products" asp-action="Index">Uroloq</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Categories" asp-action="Index">Ginekoloq</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Products" asp-action="Index">Onkologiya</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Categories" asp-action="Index">Pediatr</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-area="WebCms" asp-controller="Pages" asp-action="Index">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Həkimlər</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#service" aria-expanded="true" aria-controls="service">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Sağlamlıq</span>
-                </a>
-                <div id="service" class="collapse" aria-labelledby="service" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Səhifə haqqında:</h6>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Recipes" asp-action="Index">Aksiyalar</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="RecipeCategories" asp-action="Index">Məqalələr</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Recipes" asp-action="Index">Həkimlərin Bloqu</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="RecipeCategories" asp-action="Index">Sağlam həyat tərzi</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" asp-area="WebCms" asp-controller="About" asp-action="Index">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Haqqımızda</span>
+                    <span>MAGAZALAR</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" asp-area="WebCms" asp-controller="Blogs" asp-action="Index">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Əlaqə</span>
+                    <span>ILETISIM</span>
                 </a>
             </li>
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Parametrlər
-            </div>
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#config" aria-expanded="true" aria-controls="config">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Səhifə düzəlişləri</span>
-                </a>
-                <div id="config" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Səhifə düzəlişləri:</h6>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="WebConfigs" asp-action="Index">Ümumi</a>
-                        <a class="collapse-item" asp-area="WebCms" asp-controller="Seos" asp-action="Index">Seo</a>
-                        @*<a class="collapse-item" asp-area="WebCms" asp-controller="Resources" asp-action="Index">Site Ceviri</a>*@
-                    </div>
-                </div>
-            </li>
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" asp-area="WebCms" asp-controller="AdminUsers" asp-action="Index">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>İstifadəçilər</span>
-                </a>
-            </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-            <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>

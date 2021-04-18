@@ -136,8 +136,11 @@ namespace ArmoFur.Migrations
                     b.Property<string>("Size")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UniqKod")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlFile")
                         .HasColumnType("nvarchar(max)");
@@ -172,6 +175,24 @@ namespace ArmoFur.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Languages");
+                });
+
+            modelBuilder.Entity("ArmoFur.Models.BLL.MainPage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("OrderBy")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Videocode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MainPages");
                 });
 
             modelBuilder.Entity("ArmoFur.Models.BLL.ManCollection", b =>
